@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="محمد علی کی اردو شاعری — محبت، زندگی، اداسی اور دوستی کے خوبصورت اشعار۔">
+  <title>محمد علی | اردو شاعری</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home">محمد علی <span>اردو شاعری</span></a>
+    <nav aria-label="مرکزی مینیو">
+      <a href="#home">ہوم</a>
+      <a href="#poetry">شاعری</a>
+      <a href="#about">تعارف</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">لفظوں میں دل کی بات</p>
+        <h1>محمد علی کی<br><span>اردو شاعری</span></h1>
+        <p class="hero-copy">احساس، محبت اور زندگی کے رنگ — چند لفظ، کئی کہانیاں۔</p>
+        <a class="primary-btn" href="#poetry">شاعری پڑھیں</a>
+      </div>
+      <div class="hero-mark" aria-hidden="true">ؔ</div>
+    </section>
+
+    <section class="poetry-section" id="poetry">
+      <div class="section-heading">
+        <p class="eyebrow">دل سے نکلے ہوئے لفظ</p>
+        <h2>شاعری کا انتخاب</h2>
+      </div>
+
+      <div class="toolbar">
+        <label class="search-wrap">
+          <span class="sr-only">شاعری تلاش کریں</span>
+          <input id="searchInput" type="search" placeholder="شاعری تلاش کریں..." autocomplete="off">
+        </label>
+        <div class="filters" role="group" aria-label="شاعری کی قسم">
+          <button class="filter active" data-category="all">تمام</button>
+          <button class="filter" data-category="love">محبت</button>
+          <button class="filter" data-category="sad">اداسی</button>
+          <button class="filter" data-category="life">زندگی</button>
+        </div>
+      </div>
+
+      <div class="poetry-grid" id="poetryGrid">
+        <article class="poem-card" data-category="love">
+          <span class="poem-tag">محبت</span>
+          <p class="verse">تیری یادوں سے روشن ہے دل کا ہر اک گوشہ<br>ورنہ اس شہرِ خاموشی میں چراغ کہاں جلتے</p>
+          <button class="copy-btn" type="button">شعر کاپی کریں</button>
+        </article>
+        <article class="poem-card" data-category="sad">
+          <span class="poem-tag">اداسی</span>
+          <p class="verse">کچھ خواب تھے جو آنکھوں میں ہی رہ گئے<br>کچھ لوگ تھے جو دل میں آ کر بھی نہ ٹھہرے</p>
+          <button class="copy-btn" type="button">شعر کاپی کریں</button>
+        </article>
+        <article class="poem-card" data-category="life">
+          <span class="poem-tag">زندگی</span>
+          <p class="verse">سفر کٹھن سہی، حوصلہ کم نہ ہونے دو<br>اندھیری رات میں امید کا دیا جلنے دو</p>
+          <button class="copy-btn" type="button">شعر کاپی کریں</button>
+        </article>
+        <article class="poem-card" data-category="love">
+          <span class="poem-tag">محبت</span>
+          <p class="verse">لفظ کم پڑ جائیں تو خاموشی پڑھ لینا<br>دل کی ہر بات کتابوں میں نہیں ملتی</p>
+          <button class="copy-btn" type="button">شعر کاپی کریں</button>
+        </article>
+        <article class="poem-card" data-category="sad">
+          <span class="poem-tag">اداسی</span>
+          <p class="verse">ہنستے چہروں کے پیچھے بھی درد ہوتے ہیں<br>ہر خاموش شخص کے اپنے کچھ راز ہوتے ہیں</p>
+          <button class="copy-btn" type="button">شعر کاپی کریں</button>
+        </article>
+        <article class="poem-card" data-category="life">
+          <span class="poem-tag">زندگی</span>
+          <p class="verse">وقت سکھاتا ہے ہر موڑ پہ جینا ہم کو<br>گر کے اٹھنا ہی تو منزل کا پتا دیتا ہے</p>
+          <button class="copy-btn" type="button">شعر کاپی کریں</button>
+        </article>
+      </div>
+      <p id="emptyMessage" class="empty-message" hidden>اس تلاش میں کوئی شعر نہیں ملا۔</p>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-card">
+        <p class="eyebrow">ہمارا تعارف</p>
+        <h2>الفاظ جو دل تک پہنچیں</h2>
+        <p>یہ صفحہ اردو شاعری کے شوقین قارئین کے لیے بنایا گیا ہے۔ یہاں محبت، اداسی اور زندگی کے احساسات کو خوبصورت لفظوں میں پیش کیا گیا ہے۔</p>
+        <p class="signature">محمد علی</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> محمد علی اردو شاعری — تمام حقوق محفوظ ہیں۔</p>
+    <a href="#home">واپس اوپر ↑</a>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

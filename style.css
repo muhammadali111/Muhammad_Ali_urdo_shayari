@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;500;600;700&display=swap');
+
+:root {
+  --ink: #f7f1e7;
+  --muted: #c7bba8;
+  --gold: #d9b875;
+  --bg: #111713;
+  --panel: #1b251f;
+  --line: rgba(217,184,117,.25);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Noto Nastaliq Urdu", serif; line-height: 2.1;
+}
+a { color: inherit; text-decoration: none; }
+.site-header {
+  min-height: 78px; display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 7%; border-bottom: 1px solid var(--line); background: rgba(17,23,19,.94);
+}
+.brand { font-size: 1.35rem; font-weight: 700; color: var(--gold); line-height: 1.5; }
+.brand span { display: block; font-size: .75rem; color: var(--muted); font-weight: 400; }
+nav { display: flex; gap: 26px; color: var(--muted); }
+nav a:hover, footer a:hover { color: var(--gold); }
+.hero {
+  min-height: 510px; padding: 75px 10%; display: flex; align-items: center;
+  justify-content: space-between; position: relative; overflow: hidden;
+  background: radial-gradient(ellipse at 80% 40%, #2b3b2e 0%, #17231c 42%, #111713 78%);
+}
+.hero-content { max-width: 680px; position: relative; z-index: 1; }
+.eyebrow { color: var(--gold); letter-spacing: .04em; margin: 0 0 12px; }
+h1 { font-size: clamp(2.7rem, 7vw, 5.3rem); line-height: 1.55; margin: 0 0 12px; }
+h1 span { color: var(--gold); }
+.hero-copy { color: var(--muted); font-size: 1.1rem; margin: 0 0 30px; }
+.primary-btn {
+  display: inline-block; background: var(--gold); color: #172019; padding: 8px 27px;
+  border-radius: 4px; font-weight: 700; transition: transform .2s, background .2s;
+}
+.primary-btn:hover { transform: translateY(-3px); background: #edd39b; }
+.hero-mark { font-size: 19rem; line-height: 1; color: rgba(217,184,117,.09); padding-left: 5%; }
+.poetry-section { padding: 75px 7%; max-width: 1440px; margin: auto; }
+.section-heading { text-align: center; margin-bottom: 28px; }
+h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin: 0; }
+.toolbar { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; margin: 30px 0; }
+.search-wrap input {
+  width: min(340px, 82vw); padding: 10px 16px; border: 1px solid var(--line);
+  background: #18221b; color: var(--ink); border-radius: 5px; font: inherit; outline: none;
+}
+.search-wrap input:focus { border-color: var(--gold); }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.filter, .copy-btn {
+  font: inherit; cursor: pointer; border: 1px solid var(--line); color: var(--muted);
+  background: transparent; border-radius: 4px; padding: 5px 16px;
+}
+.filter:hover, .filter.active { background: var(--gold); color: #172019; border-color: var(--gold); }
+.poetry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.poem-card {
+  background: linear-gradient(145deg, #202d24, #18211b); border: 1px solid var(--line);
+  border-radius: 7px; padding: 22px 23px; min-height: 220px; display: flex;
+  flex-direction: column; justify-content: space-between; transition: transform .2s, border-color .2s;
+}
+.poem-card:hover { transform: translateY(-4px); border-color: rgba(217,184,117,.65); }
+.poem-tag { color: var(--gold); font-size: .85rem; }
+.verse { font-size: 1.15rem; text-align: center; line-height: 2.4; margin: 15px 0 20px; }
+.copy-btn { align-self: flex-start; font-size: .85rem; padding: 3px 13px; }
+.copy-btn:hover { color: var(--gold); border-color: var(--gold); }
+.empty-message { text-align: center; color: var(--muted); }
+.about-section { padding: 20px 7% 80px; }
+.about-card {
+  max-width: 800px; margin: auto; padding: 35px; text-align: center;
+  border: 1px solid var(--line); background: #18221b; border-radius: 8px;
+}
+.about-card > p:not(.eyebrow):not(.signature) { color: var(--muted); }
+.signature { color: var(--gold); font-size: 1.4rem; margin-bottom: 0; }
+footer {
+  border-top: 1px solid var(--line); padding: 18px 7%; display: flex;
+  justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--muted); font-size: .85rem;
+}
+footer p { margin: 0; }
+.toast {
+  position: fixed; bottom: 22px; left: 50%; transform: translate(-50%, 20px);
+  background: var(--gold); color: #172019; padding: 7px 22px; border-radius: 4px;
+  opacity: 0; pointer-events: none; transition: .25s; z-index: 5;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+[hidden] { display: none !important; }
+@media (max-width: 900px) { .poetry-grid { grid-template-columns: repeat(2, 1fr); } .hero-mark { font-size: 13rem; } }
+@media (max-width: 620px) {
+  .site-header { padding: 10px 5%; align-items: flex-start; }
+  nav { gap: 12px; font-size: .85rem; padding-top: 5px; }
+  .hero { min-height: 430px; padding: 55px 7%; }
+  .hero-mark { position: absolute; left: -20px; bottom: 0; font-size: 12rem; }
+  .poetry-section { padding: 55px 5%; }
+  .poetry-grid { grid-template-columns: 1fr; }
+  .toolbar { justify-content: center; }
+  .search-wrap input { width: 90vw; }
+  .about-card { padding: 24px 18px; }
+}
